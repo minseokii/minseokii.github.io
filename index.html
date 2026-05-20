@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minseok Kang</title>
+  <meta
+    name="description"
+    content="Minseok Kang | Computer Vision Engineer and ML/DL Researcher focused on Scene Understanding, Video Temporal Grounding, and Vision-Language Multimodal Learning."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-grid"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">Minseok Kang</a>
+
+      <nav class="nav" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+          <span class="theme-text" id="themeText">Dark</span>
+        </button>
+        <a class="nav-cv" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="hero-left">
+          <p class="hero-kicker">Scene Understanding · Video Temporal Grounding<br>Vision-Language Multimodal Learning</p>
+
+          <h1 class="hero-title">
+            Minseok Kang
+          </h1>
+
+          <p class="hero-subtitle">
+            Integrated M.S./Ph.D. Student in Electrical and Electronic Engineering at
+            <strong>Yonsei University</strong>, working on <strong>computer vision</strong>
+            and <strong>machine/deep learning</strong> for video.
+          </p>
+
+          <p class="hero-description">
+            My research centers on <strong>scene understanding</strong> and
+            <strong>vision-language multimodal learning</strong>, including video temporal
+            grounding, video scene graph generation, and video large language models.
+            I am interested in building models that reason about motion, long-range
+            temporal structure, and language for real-world video understanding.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#publications">View Publications</a>
+            <a class="btn btn-secondary" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+          </div>
+
+          <div class="hero-links">
+            <a href="mailto:louis0503@yonsei.ac.kr">Email</a>
+            <a href="https://github.com/minseokii" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-value">NeurIPS 2025</span>
+              <span class="metric-label">First-Author Paper</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">3rd Place</span>
+              <span class="metric-label">Perception Test Challenge 2025 ⭐</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">3 Patents</span>
+              <span class="metric-label">KR Patents Filed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="portrait-shell">
+            <div class="portrait-glow"></div>
+            <img src="assets/Photo.jpg" alt="Minseok Kang profile photo" class="portrait" />
+          </div>
+
+          <div class="hero-side-card glass-card">
+            <p class="side-card-label">Research Focus</p>
+            <h3>Scene Understanding for Video</h3>
+            <p>
+              Advancing video temporal grounding, video scene graph generation,
+              and vision-language multimodal learning, with a focus on video
+              large language models and efficient video understanding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-index">01</span>
+          <div>
+            <p class="section-kicker">About</p>
+            <h2>Researcher Profile</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card about-card">
+            <p>
+              I am an Integrated M.S./Ph.D. student in Electrical and Electronic
+              Engineering at <strong>Yonsei University</strong>, in the
+              <strong>Image and Video Pattern Recognition Lab (MVP Lab)</strong>, advised by
+              <strong>Prof. Sangyoun Lee</strong>. I received my B.S. in Electrical
+              and Electronic Engineering from <strong>Korea University</strong>.
+            </p>
+
+            <p>
+              My research lies in computer vision and machine/deep learning, with
+              a focus on scene understanding, video temporal grounding, and video
+              scene graph generation, as well as vision-language multimodal
+              learning for video large language models.
+            </p>
+
+            <p>
+              I am interested in models that can understand dynamic visual content,
+              reason about motion and long-range temporal structure, and connect
+              vision with language for robust real-world video understanding.
+            </p>
+          </div>
+
+          <div class="glass-card info-card">
+            <div class="info-row">
+              <span class="info-key">Affiliation</span>
+              <span class="info-value">Yonsei University, MVP Lab</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Advisor</span>
+              <span class="info-value">Prof. Sangyoun Lee</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Program</span>
+              <span class="info-value">Integrated M.S./Ph.D. (2022 – 2027 expected)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Interests</span>
+              <span class="info-value">Scene Understanding, Video Temporal Grounding, Vision-Language Multimodal Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-index">02</span>
+          <div>
+            <p class="section-kicker">News</p>
+            <h2>Recent Updates</h2>
+          </div>
+        </div>
+
+        <div class="timeline-list">
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">May 2026</div>
+            <div class="timeline-body">
+              <h3>NeurIPS 2026 Submission</h3>
+              <p>First-author paper "OTT-Vid" under review at NeurIPS 2026.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">Mar 2026</div>
+            <div class="timeline-body">
+              <h3>ECCV 2026 Submission</h3>
+              <p>First-author paper on weakly-supervised video scene graph generation under review at ECCV 2026.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">Feb 2026</div>
+            <div class="timeline-body">
+              <h3>CVPR Findings 2026</h3>
+              <p>Two co-authored papers accepted to CVPR Findings 2026.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">Feb 2026</div>
+            <div class="timeline-body">
+              <h3>Pattern Recognition 2026</h3>
+              <p>Co-authored paper on zero-shot anomaly detection accepted to Pattern Recognition.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">Oct 2025</div>
+            <div class="timeline-body">
+              <h3>3rd Place — Perception Test Challenge 2025</h3>
+              <p>3rd place in Task 3 (Temporal Action &amp; Sound Localization), hosted by DeepMind at the ICCV 2025 Workshop.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">Sep 2025</div>
+            <div class="timeline-body">
+              <h3>NeurIPS 2025</h3>
+              <p>First-author paper "DualGround" accepted to NeurIPS 2025.</p>
+            </div>
+          </div>
+
+          <div class="timeline-entry glass-card">
+            <div class="timeline-date">May 2025</div>
+            <div class="timeline-body">
+              <h3>ICIP 2025</h3>
+              <p>Co-authored paper "CMTM" accepted to ICIP 2025.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-index">03</span>
+          <div>
+            <p class="section-kicker">Publications</p>
+            <h2>Selected Publications</h2>
+          </div>
+        </div>
+
+        <div class="publication-stack">
+          <article class="publication-card glass-card featured">
+            <div class="pub-badge">Featured</div>
+            <h3>OTT-Vid: Optimal Transport Temporal Token Compression for Video Large Language Models</h3>
+            <p class="pub-authors"><strong>Minseok Kang</strong>, Minhyeok Lee, Jungho Lee, Minjung Kim, Donghyeong Kim, Dayeon Lee, Heeseung Choi, Ig-Jae Kim, Sangyoun Lee</p>
+            <p class="pub-venue">Under Review at NeurIPS 2026</p>
+            <p class="pub-desc">
+              An optimal transport based temporal token compression method for efficient video large language models.
+            </p>
+          </article>
+
+          <article class="publication-card glass-card featured">
+            <div class="pub-badge">Featured</div>
+            <h3>Revisiting Weakly-Supervised Video Scene Graph Generation via Pair Affinity Learning</h3>
+            <p class="pub-authors"><strong>Minseok Kang</strong>, Minhyeok Lee, Minjung Kim, Jungho Lee, Donghyeong Kim, Sungmin Woo, Inseok Jeon, Sangyoun Lee</p>
+            <p class="pub-venue">Under Review at ECCV 2026</p>
+            <p class="pub-desc">
+              A pair affinity learning approach for weakly-supervised video scene graph generation.
+            </p>
+          </article>
+
+          <article class="publication-card glass-card featured">
+            <div class="pub-badge">Featured</div>
+            <h3>Empower Words: DualGround for Structured Phrase and Sentence-Level Temporal Grounding</h3>
+            <p class="pub-authors"><strong>Minseok Kang</strong>, Minhyeok Lee, Minjung Kim, Donghyeong Kim, Sangyoun Lee</p>
+            <p class="pub-venue">NeurIPS 2025</p>
+            <p class="pub-desc">
+              A structured framework for phrase- and sentence-level temporal grounding in video.
+            </p>
+          </article>
+
+          <article class="publication-card glass-card">
+            <h3>SwiftVGGT: A Scalable Visual Geometry Grounded Transformer for Large-Scale Scenes</h3>
+            <p class="pub-authors">Jungho Lee, Minhyeok Lee, Sunghun Yang, <strong>Minseok Kang</strong>, Sangyoun Lee</p>
+            <p class="pub-venue">CVPR Findings 2026</p>
+          </article>
+
+          <article class="publication-card glass-card">
+            <h3>Seen-to-Scene: Keep the Seen, Generate the Unseen for Video Outpainting</h3>
+            <p class="pub-authors">Inseok Jeon, Minhyeok Lee, Seunghoon Lee, <strong>Minseok Kang</strong>, Suhwan Cho, Sangyoun Lee</p>
+            <p class="pub-venue">CVPR Findings 2026</p>
+          </article>
+
+          <article class="publication-card glass-card">
+            <h3>Generalizing CLIP Prompts for Zero-Shot Anomaly Detection</h3>
+            <p class="pub-authors">Donghyeong Kim, Chaewon Park, Suhwan Cho, Hyeonjeong Lim, <strong>Minseok Kang</strong>, Jungho Lee, Sangyoun Lee</p>
+            <p class="pub-venue">Pattern Recognition 2026</p>
+          </article>
+
+          <article class="publication-card glass-card">
+            <h3>CMTM: Cross-Modal Token Modulation for Unsupervised Video Object Segmentation</h3>
+            <p class="pub-authors">Inseok Jeon, Suhwan Cho, Minhyeok Lee, Seunghoon Lee, <strong>Minseok Kang</strong>, Jungho Lee, Chaewon Park, Donghyeong Kim, Sangyoun Lee</p>
+            <p class="pub-venue">ICIP 2025</p>
+          </article>
+
+          <article class="publication-card glass-card">
+            <h3>Multilevel Artificial Electronic Synaptic Device of Direct Grown Robust MoS<sub>2</sub> Based Memristor Array for In-Memory Deep Neural Network</h3>
+            <p class="pub-authors">Muhammad Naqi*, <strong>Minseok Kang</strong>*, Na Liu*, Taehwan Kim, Seungho Baek, Arindam Bala, Changgyun Moon, Jongsun Park, Sunkook Kim &nbsp;<em>(* equal contribution)</em></p>
+            <p class="pub-venue">npj 2D Materials and Applications, 2022</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-index">04</span>
+          <div>
+            <p class="section-kicker">Research</p>
+            <h2>Research Interests</h2>
+          </div>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card glass-card">
+            <span class="research-number">01</span>
+            <h3>Scene Understanding</h3>
+            <p>
+              Building models that parse complex visual scenes, reason about
+              objects and their relations, and capture structured semantics in video.
+            </p>
+            <p class="research-subtopics">
+              <strong>Topics:</strong> Video Scene Graph Generation, Structured Reasoning
+            </p>
+          </article>
+
+          <article class="research-card glass-card">
+            <span class="research-number">02</span>
+            <h3>Video Temporal Grounding</h3>
+            <p>
+              Localizing moments and actions in video given natural language,
+              with a focus on phrase- and sentence-level temporal grounding.
+            </p>
+            <p class="research-subtopics">
+              <strong>Topics:</strong> Temporal Grounding, Moment Retrieval, Action Localization
+            </p>
+          </article>
+
+          <article class="research-card glass-card">
+            <span class="research-number">03</span>
+            <h3>Vision-Language Multimodal Learning</h3>
+            <p>
+              Connecting vision and language to improve understanding and
+              reasoning over dynamic visual content.
+            </p>
+            <p class="research-subtopics">
+              <strong>Topics:</strong> Video Large Language Models, Cross-Modal Learning
+            </p>
+          </article>
+
+          <article class="research-card glass-card">
+            <span class="research-number">04</span>
+            <h3>Efficient Video Understanding</h3>
+            <p>
+              Designing token compression and efficient architectures that make
+              large-scale video models practical for real-world deployment.
+            </p>
+            <p class="research-subtopics">
+              <strong>Topics:</strong> Token Compression, Optimal Transport, Efficient Modeling
+            </p>
+          </article>
+
+          <article class="research-card glass-card">
+            <span class="research-number">05</span>
+            <h3>Robust Perception</h3>
+            <p>
+              Developing recognition systems that remain reliable under low-visibility,
+              adverse weather, and multi-sensor conditions.
+            </p>
+            <p class="research-subtopics">
+              <strong>Topics:</strong> Multi-Sensor Fusion, Robust Detection, Domain Generalization
+            </p>
+          </article>
+
+          <article class="research-card glass-card">
+            <span class="research-number">06</span>
+            <h3>Video Object Segmentation</h3>
+            <p>
+              Studying motion-guided and cross-modal methods for segmenting salient
+              objects in video, including unsupervised settings.
+            </p>
+            <p class="research-subtopics">
+              <strong>Topics:</strong> Unsupervised VOS, Motion Cues, Cross-Modal Modulation
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel glass-card">
+          <p class="section-kicker">Contact</p>
+          <h2>Let's Connect</h2>
+          <p>
+            I am always happy to discuss research and collaboration. <br>
+            please feel free to get in touch.
+          </p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:louis0503@yonsei.ac.kr">Email Me</a>
+            <a class="btn btn-secondary" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+          </div>
+
+          <div class="contact-links bottom-links">
+            <a href="mailto:louis0503@yonsei.ac.kr">Email</a>
+            <a href="https://github.com/minseokii" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Minseok Kang</p>
+      <p>Designed for research visibility and academic branding.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
