@@ -293,13 +293,17 @@ img {
   gap: 14px;
 }
 
+.pub-links {
+  gap: 10px;
+  margin-top: 16px;
+}
+
 .hero-links {
   margin-top: 8px;
   margin-bottom: 30px;
 }
 
 .hero-links a,
-.pub-links a,
 .project-links a,
 .contact-links a {
   color: var(--primary);
@@ -307,10 +311,27 @@ img {
 }
 
 .hero-links a:hover,
-.pub-links a:hover,
 .project-links a:hover,
 .contact-links a:hover {
   color: var(--primary-strong);
+}
+
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--tag-bg);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.pub-links a:hover {
+  color: var(--primary-strong);
+  border-color: var(--primary);
+  transform: translateY(-1px);
 }
 
 .btn {
