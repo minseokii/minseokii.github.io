@@ -304,11 +304,21 @@ img {
 }
 
 .hero-links {
-  width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
-  gap: 22px;
-  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.link-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 .hero-links a,
