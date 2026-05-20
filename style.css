@@ -299,8 +299,9 @@ img {
 }
 
 .hero-links {
-  margin-top: 8px;
+  margin-top: 20px;
   margin-bottom: 30px;
+  gap: 22px;
 }
 
 .hero-links a,
