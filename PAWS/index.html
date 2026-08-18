@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PAWS: Revisiting Weakly-Supervised Video Scene Graph Generation via Pair Affinity Learning. ECCV 2026.">
+  <meta name="theme-color" content="#f7f8fb">
+  <title>PAWS | ECCV 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="wordmark" href="#top" aria-label="PAWS home">PAWS</a>
+      <nav class="nav" aria-label="Page navigation">
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#demo">Demo</a>
+        <a href="#citation">BibTeX</a>
+      </nav>
+      <a class="home-link" href="../">Minseok Kang <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="venue"><span></span> ECCV 2026</div>
+      <h1>Revisiting Weakly-Supervised Video Scene Graph Generation via Pair Affinity Learning</h1>
+      <p class="authors">
+        <a href="https://minseokii.github.io/">Minseok Kang</a>, <a href="https://hydragon.co.kr/">Minhyeok Lee</a>, Minjung Kim, <a href="https://jho-yonsei.github.io/">Jungho Lee</a>,<br class="desktop-break">
+        Donghyeong Kim, Sungmin Woo, <a href="https://inseokjeon.github.io/">Inseok Jeon</a>, and Sangyoun Lee
+      </p>
+      <p class="affiliation">Yonsei University · Image and Video Pattern Recognition Lab</p>
+
+      <div class="hero-actions" aria-label="Project resources">
+        <a class="resource-button primary" href="https://arxiv.org/abs/2603.21559" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">▤</span> Paper
+        </a>
+        <a class="resource-button" href="https://arxiv.org/abs/2603.21559" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">A</span> arXiv
+        </a>
+        <a class="resource-button" href="https://github.com/minseokii/PAWS" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">⌘</span> Code
+        </a>
+        <a class="resource-button" href="#citation">
+          <span aria-hidden="true">“</span> BibTeX
+        </a>
+      </div>
+
+      <figure class="hero-demo">
+        <video autoplay muted loop playsinline controls preload="metadata" aria-label="Qualitative comparison of PLA and PAWS predictions on an Action Genome video clip">
+          <source src="./assets/Y665P_pla_paws_vertical_7s_17s.mp4" type="video/mp4">
+          Your browser does not support embedded MP4 video.
+        </video>
+        <figcaption>
+          <strong>Qualitative comparison.</strong> PLA and PAWS predictions on a short Action Genome clip.
+        </figcaption>
+      </figure>
+
+      <div class="tldr" aria-labelledby="tldr-title">
+        <p id="tldr-title">TL;DR</p>
+        <h2>PAWS learns which object pairs actually interact.</h2>
+        <p>We address the object-pair distribution shift in weakly-supervised VSGG by refining pseudo-labels with vision-language grounding and suppressing non-interactive pairs throughout relational reasoning.</p>
+      </div>
+    </section>
+
+    <section class="section shell" id="abstract">
+      <div class="section-label">01 · Abstract</div>
+      <div class="abstract-copy">
+        <p>
+          Weakly-supervised video scene graph generation relies on off-the-shelf detectors that produce numerous interaction-irrelevant objects, creating a substantial object-pair distribution shift from fully-supervised settings. We address this shift at both the pseudo-label generation and relational reasoning stages. <strong>Relation-Aware Matching (RAM)</strong> uses vision-language grounding to refine ambiguous detection-triplet matching, while <strong>Pair Affinity Learning and Scoring (PALS)</strong> learns pair interactivity for prediction ranking and <strong>Pair Affinity Modulation (PAM)</strong> suppresses non-interactive pairs during spatial-temporal reasoning. Our framework consistently improves different baselines and backbones on Action Genome, achieving state-of-the-art weakly-supervised VSGG performance.
+        </p>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method">
+      <div class="shell">
+        <div class="section-label">02 · Method</div>
+
+        <article class="method-block">
+          <div class="method-copy">
+            <span class="method-number">01</span>
+            <div>
+              <h3>Overall framework</h3>
+              <p>Conventional WS-VSGG trains only on class-matched pairs and discards unmatched pairs, even though both appear at inference. Our pipeline refines the matched partition and learns predicate classes together with pair affinity from matched and unmatched pairs.</p>
+            </div>
+          </div>
+          <figure>
+            <img src="./assets/pipeline-overview.png" alt="Comparison between the conventional weakly-supervised VSGG pipeline and PAWS, which adds relation-aware matching and pair affinity learning and modulation.">
+            <figcaption>PAWS turns discarded unmatched pairs into explicit supervision for pair interactivity.</figcaption>
+          </figure>
+        </article>
+
+        <article class="method-block">
+          <div class="method-copy">
+            <span class="method-number">02</span>
+            <div>
+              <h3>Relation-Aware Matching</h3>
+              <p>RAM converts each unlocalized triplet into a relation-aware text query and extracts cross-modal attention from a vision-language model. Reliable attention grounds the interaction-consistent instance; uncertain cases safely fall back to class-level matching.</p>
+            </div>
+          </div>
+          <figure>
+            <img src="./assets/relation-aware-matching.png" alt="Relation-Aware Matching uses a relation-aware text query, cross-attention, and reliability estimation to select grounded or class-level matching.">
+            <figcaption>Cleaner matching reduces false positives caused by multiple same-class detections.</figcaption>
+          </figure>
+        </article>
+
+        <article class="method-block">
+          <div class="method-copy">
+            <span class="method-number">03</span>
+            <div>
+              <h3>Pair Affinity Learning &amp; Modulation</h3>
+              <p>PALS learns whether a subject-object pair is interactive and uses that affinity in final triplet ranking. PAM carries the same signal inside spatial-temporal attention, preventing non-interactive pairs from diluting relational context.</p>
+            </div>
+          </div>
+          <figure>
+            <img src="./assets/pair-affinity-learning.png" alt="Pair Affinity Learning predicts predicate class and pair affinity, and modulates spatial-temporal attention using affinity embeddings.">
+            <figcaption>Pair affinity improves both output-level scoring and internal contextual reasoning.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="results">
+      <div class="section-label">03 · Quantitative Results</div>
+      <div class="results-intro">
+        <p>Scene graph detection on Action Genome with the STTran backbone. Higher Recall@K is better.</p>
+        <div class="result-callout">
+          <div>
+            <strong>88.3%</strong>
+            <span>of Fully supervised<br>With-Constraint R@10</span>
+          </div>
+          <div>
+            <strong>94.3%</strong>
+            <span>of Fully supervised<br>No-Constraint R@10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap" role="region" aria-label="Action Genome comparison table" tabindex="0">
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Backbone</th>
+              <th rowspan="2">Supervision</th>
+              <th rowspan="2">Method</th>
+              <th colspan="3">With Constraint</th>
+              <th colspan="3">No Constraint</th>
+            </tr>
+            <tr>
+              <th>R@10</th><th>R@20</th><th>R@50</th>
+              <th>R@10</th><th>R@20</th><th>R@50</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="full-row">
+              <td rowspan="5">STTran <a class="table-reference" href="#ref-sttran" aria-label="Reference 1">[1]</a></td>
+              <td>Fully</td>
+              <td class="method">Vanilla</td>
+              <td class="metric">25.20</td><td class="metric">34.10</td><td class="metric">37.00</td>
+              <td class="metric">24.60</td><td class="metric">36.20</td><td class="metric">48.80</td>
+            </tr>
+            <tr>
+              <td rowspan="4">Weakly</td>
+              <td class="method">PLA <a class="table-reference" href="#ref-pla" aria-label="Reference 2">[2]</a></td>
+              <td class="metric">15.39</td><td class="metric">21.44</td><td class="metric">26.24</td>
+              <td class="metric">15.83</td><td class="metric">22.83</td><td class="metric">31.74</td>
+            </tr>
+            <tr class="ours-row">
+              <td class="method">PLA + <strong>Ours</strong></td>
+              <td class="metric"><strong>22.24</strong></td><td class="metric"><strong>26.48</strong></td><td class="metric"><strong>28.00</strong></td>
+              <td class="metric"><strong>23.20</strong></td><td class="metric"><strong>30.24</strong></td><td class="metric"><strong>37.47</strong></td>
+            </tr>
+            <tr>
+              <td class="method">TRKT</td>
+              <td class="metric">15.11</td><td class="metric">20.63</td><td class="metric">26.02</td>
+              <td class="metric">15.73</td><td class="metric">22.64</td><td class="metric">31.23</td>
+            </tr>
+            <tr class="ours-row">
+              <td class="method">TRKT + <strong>Ours</strong></td>
+              <td class="metric"><strong>19.63</strong></td><td class="metric"><strong>24.29</strong></td><td class="metric"><strong>27.55</strong></td>
+              <td class="metric"><strong>21.13</strong></td><td class="metric"><strong>27.95</strong></td><td class="metric"><strong>35.89</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="shell">
+        <div class="section-label">04 · Interactive Demo</div>
+        <div class="demo-intro">
+          <div>
+            <h2>Compare scene graphs, frame by frame.</h2>
+            <p>Select a clip and toggle any combination of ground truth and model predictions. Every panel shares the same decoded video frame, playback position, and seek control.</p>
+          </div>
+          <p class="demo-note">Predictions are produced on sparsely sampled frames and held until the next prediction timestamp.</p>
+        </div>
+
+        <div class="demo-picker" id="demoVideos" aria-label="Select a demo video"></div>
+        <div class="demo-methods" id="demoMethods" aria-label="Select comparison methods"></div>
+
+        <div class="demo-player" aria-label="Interactive qualitative comparison">
+          <video id="demoSourceVideo" class="demo-source-video" muted playsinline preload="metadata"></video>
+          <div class="demo-controls">
+            <button id="demoPlay" class="demo-play" type="button" aria-label="Play demo">Play</button>
+            <span id="demoCurrentTime" class="demo-time">0:00.00</span>
+            <input id="demoSeek" type="range" min="0" max="10" step="0.01" value="0" aria-label="Demo playback position">
+            <span id="demoDuration" class="demo-time">0:10.00</span>
+          </div>
+          <div id="demoStatus" class="demo-status" role="status" aria-live="polite">Loading interactive demo…</div>
+          <div id="demoPanels" class="demo-panels"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section citation-section" id="citation">
+      <div class="shell citation-grid">
+        <div>
+          <div class="section-label">05 · Citation</div>
+        </div>
+        <div class="bibtex-box">
+          <button id="copyBibtex" type="button" aria-label="Copy BibTeX">Copy</button>
+          <pre><code id="bibtex">@inproceedings{kang2026paws,
+  title     = {Revisiting Weakly-Supervised Video Scene Graph Generation via Pair Affinity Learning},
+  author    = {Kang, Minseok and Lee, Minhyeok and Kim, Minjung and Lee, Jungho and Kim, Donghyeong and Woo, Sungmin and Jeon, Inseok and Lee, Sangyoun},
+  booktitle = {European Conference on Computer Vision},
+  year      = {2026}
+}</code></pre>
+        </div>
+        <ol class="reference-list" aria-label="References">
+          <li id="ref-sttran">
+            Y. Cong, W. Liao, H. Ackermann, B. Rosenhahn, and M. Y. Yang,
+            “Spatial-Temporal Transformer for Dynamic Scene Graph Generation,”
+            <em>ICCV</em>, 2021.
+          </li>
+          <li id="ref-pla">
+            S. Chen, J. Xiao, and L. Chen,
+            “Video Scene Graph Generation from Single-Frame Weak Supervision,”
+            <em>ICLR</em>, 2023.
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <p>© 2026 PAWS Authors</p>
+      <p>Revisiting Weakly-Supervised Video Scene Graph Generation via Pair Affinity Learning</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

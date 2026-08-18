@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "videos": [
+    {
+      "id": "Y665P",
+      "file": "videos/Y665P.mp4",
+      "results": {
+        "gt": "results/Y665P/gt.json",
+        "sttran": "results/Y665P/sttran.json",
+        "pla": "results/Y665P/pla.json",
+        "paws_without_pa": "results/Y665P/paws_without_pa.json",
+        "paws_with_pa": "results/Y665P/paws_with_pa.json"
+      },
+      "duration": 10.0,
+      "source_fps": 29.868,
+      "source_width": 480,
+      "source_height": 270,
+      "prediction_origin_frame": 27,
+      "demo_range": [
+        7.0,
+        17.0
+      ],
+      "source_start": 7.870497
+    },
+    {
+      "id": "VW4UD",
+      "file": "videos/VW4UD.mp4",
+      "results": {
+        "gt": "results/VW4UD/gt.json",
+        "sttran": "results/VW4UD/sttran.json",
+        "pla": "results/VW4UD/pla.json",
+        "paws_without_pa": "results/VW4UD/paws_without_pa.json",
+        "paws_with_pa": "results/VW4UD/paws_with_pa.json"
+      },
+      "duration": 10.0,
+      "source_fps": 16.642,
+      "source_width": 320,
+      "source_height": 480,
+      "prediction_origin_frame": 22,
+      "demo_range": [
+        4.0,
+        14.0
+      ],
+      "source_start": 5.261868
+    },
+    {
+      "id": "0PVKV",
+      "file": "videos/0PVKV.mp4",
+      "results": {
+        "gt": "results/0PVKV/gt.json",
+        "sttran": "results/0PVKV/sttran.json",
+        "pla": "results/0PVKV/pla.json",
+        "paws_without_pa": "results/0PVKV/paws_without_pa.json",
+        "paws_with_pa": "results/0PVKV/paws_with_pa.json"
+      },
+      "duration": 10.0,
+      "source_fps": 30.0,
+      "source_width": 480,
+      "source_height": 360,
+      "prediction_origin_frame": 15,
+      "demo_range": [
+        0.0,
+        10.0
+      ],
+      "source_start": 0.466667
+    },
+    {
+      "id": "0UK3H",
+      "file": "videos/0UK3H.mp4",
+      "results": {
+        "gt": "results/0UK3H/gt.json",
+        "sttran": "results/0UK3H/sttran.json",
+        "pla": "results/0UK3H/pla.json",
+        "paws_without_pa": "results/0UK3H/paws_without_pa.json",
+        "paws_with_pa": "results/0UK3H/paws_with_pa.json"
+      },
+      "duration": 10.0,
+      "source_fps": 16.642,
+      "source_width": 320,
+      "source_height": 480,
+      "prediction_origin_frame": 42,
+      "demo_range": [
+        0.0,
+        10.0
+      ],
+      "source_start": 2.463646
+    }
+  ]
+}
